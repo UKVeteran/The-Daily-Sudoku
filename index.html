@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8" />
+  <title>SUDOKU </title>
+
+
+  <link rel="stylesheet" href="css/stable.css">
+  <script type="text/javascript">
+    var answerA = [1,8,4,9];
+      var answerB = [5,3,1,7,6,9,8];
+      var answerC = [2,9,6,5,8,1,7,4];
+      var answerD = [7,6,5,9,2];
+      var answerE = [9,5];
+      var answerF = [8,5,9,1,3];
+      var answerG = [3,1,7,8,6,4,2,9];
+      var answerH = [6,8,9,1,4,5,7];
+      var answerI = [3,7,8,1];
+      //var abc = ['a','b','c','d','e','f','g','h','i'];
+
+      function check(){
+         //alert(document.getElementsByClassName("i")[0].innerHTML);
+         for(var i = 0; i < answerA.length; i++){
+            var a = document.getElementsByClassName('a');
+            if (a[i].innerHTML != answerA[i]){
+               a[i].style.color = "red";
+            }else{
+               a[i].style.backgroundColor = "lightgreen";
+            }
+         }//end for - answerA
+         for(var i = 0; i < answerB.length; i++){
+            var b = document.getElementsByClassName('b');
+            if (b[i].innerHTML != answerB[i]){
+               b[i].style.color = "red";
+            }else{
+               b[i].style.backgroundColor = "lightgreen";
+            }
+         }//end for - answerb
+         for(var i = 0; i < answerC.length; i++){
+            var c = document.getElementsByClassName('c');
+            if (c[i].innerHTML != answerC[i]){
+               c[i].style.color = "red";
+            }else{
+               c[i].style.backgroundColor = "lightgreen";
+            }
+         }//end for - answerc
+         for(var i = 0; i < answerD.length; i++){
+            var d = document.getElementsByClassName('d');
+            if (d[i].innerHTML != answerD[i]){
+               d[i].style.color = "red";
+            }else{
+               d[i].style.backgroundColor = "lightgreen";
+            }
+         }//end for -answer d 
+         for(var i = 0; i < answerE.length; i++){
+            var e = document.getElementsByClassName('e');
+            if (e[i].innerHTML != answerE[i]){
+               e[i].style.color = "red";
+            }else{
+               e[i].style.backgroundColor = "lightgreen";
+            }
+         }//end for  -answer e
+         for(var i = 0; i < answerF.length; i++){
+            var f = document.getElementsByClassName('f');
+            if (f[i].innerHTML != answerF[i]){
+               f[i].style.color = "red";
+            }else{
+               f[i].style.backgroundColor = "lightgreen";
+            }
+         }//end for -answer f
+         for(var i = 0; i < answerG.length; i++){
+            var g = document.getElementsByClassName('g');
+            if (g[i].innerHTML != answerG[i]){
+               g[i].style.color = "red";
+            }else{
+               g[i].style.backgroundColor = "lightgreen";
+            }
+         }//end for -asnwer g
+         for(var i = 0; i < answerH.length; i++){
+            var h = document.getElementsByClassName('h');
+            if (h[i].innerHTML != answerH[i]){
+               h[i].style.color = "red";
+            }else{
+               h[i].style.backgroundColor = "lightgreen";
+            }
+         }//end for -asnwer h
+         for(var i = 0; i < answerH.length; i++){
+            var x = document.getElementsByClassName('i');
+            if (x[i].innerHTML != answerI[i]){
+               x[i].style.color = "red";
+            }else{
+               x[i].style.backgroundColor = "lightgreen";
+            }
+         }//end for -asnwer i
+
+         
+      }//end function check()
+
+      function send(element){
+         if(document.getElementById("answer").style.backgroundColor != "lightgreen"){
+            document.getElementById("answer").innerHTML = element.innerHTML;
+         document.getElementById("answer").style.color = "blue";
+         document.getElementById("answer").removeAttribute('id');
+         }else{
+            document.getElementById("answer").removeAttribute('id');
+         }
+         
+      }
+  </script>
+</head>
+
+<body>
+
+  <table class="spuzzle">
+    <caption>SUDOKU</caption>
+
+    <tr>
+
+      <td colspan="3" rowspan="3" class="greenBox">
+        <table class="subTable">
+          <tr>
+            <td class="a" onclick="setAttribute('id','answer')"></td>
+            <td>7</td>
+            <td class="a" onclick="setAttribute('id','answer')"></td>
+          </tr>
+          <tr>
+            <td class="b" onclick="setAttribute('id','answer')"></td>
+            <td class="b" onclick="setAttribute('id','answer')"></td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td class="c" onclick="setAttribute('id','answer')"></td>
+            <td class="c" onclick="setAttribute('id','answer')"></td>
+            <td class="c" onclick="setAttribute('id','answer')"></td>
+          </tr>
+        </table>
+      </td>
+      <td colspan="3" rowspan="3" class="goldBox">
+        <table class="subTable">
+          <tr>
+            <td class="a" onclick="setAttribute('id','answer')"></td>
+            <td class="a" onclick="setAttribute('id','answer')"></td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td class="b" onclick="setAttribute('id','answer')"></td>
+            <td class="b" onclick="setAttribute('id','answer')"></td>
+            <td class="b" onclick="setAttribute('id','answer')"></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td class="c" onclick="setAttribute('id','answer')"></td>
+            <td class="c" onclick="setAttribute('id','answer')"></td>
+          </tr>
+        </table>
+      </td>
+      <td colspan="3" rowspan="3" class="greenBox">
+        <table class="subTable">
+          <tr>
+            <td>5</td>
+            <td>3</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td class="b" onclick="setAttribute('id','answer')"></td>
+            <td class="b" onclick="setAttribute('id','answer')"></td>
+          </tr>
+          <tr>
+            <td class="c" onclick="setAttribute('id','answer')"></td>
+            <td class="c" onclick="setAttribute('id','answer')"></td>
+            <td class="c" onclick="setAttribute('id','answer')"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr></tr>
+    <tr></tr>
+    <tr>
+      <td colspan="3" rowspan="3" class="goldBox">
+        <table class="subTable">
+          <tr>
+            <td class="d" onclick="setAttribute('id','answer')"></td>
+            <td class="d" onclick="setAttribute('id','answer')"></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class="e" onclick="setAttribute('id','answer')"></td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td class="f" onclick="setAttribute('id','answer')"></td>
+            <td>4</td>
+            <td class="f" onclick="setAttribute('id','answer')"></td>
+          </tr>
+        </table>
+      </td>
+      <td colspan="3" rowspan="3" class="greenBox">
+        <table class="subTable">
+          <tr>
+            <td class="d" onclick="setAttribute('id','answer')"></td>
+            <td>8</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>4</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>2</td>
+            <td class="f" onclick="setAttribute('id','answer')"></td>
+          </tr>
+        </table>
+      </td>
+      <td colspan="3" rowspan="3" class="goldBox">
+        <table class="subTable">
+          <tr>
+            <td class="d" onclick="setAttribute('id','answer')"></td>
+            <td>4</td>
+            <td class="d" onclick="setAttribute('id','answer')"></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>8</td>
+            <td class="e" onclick="setAttribute('id','answer')"></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td class="f" onclick="setAttribute('id','answer')"></td>
+            <td class="f" onclick="setAttribute('id','answer')"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr></tr>
+    <tr></tr>
+    <tr>
+      <td colspan="3" rowspan="3" class="greenBox">
+        <table class="subTable">
+          <tr>
+            <td class="g" onclick="setAttribute('id','answer')"></td>
+            <td class="g" onclick="setAttribute('id','answer')"></td>
+            <td class="g" onclick="setAttribute('id','answer')"></td>
+          </tr>
+          <tr>
+            <td class="h" onclick="setAttribute('id','answer')"></td>
+            <td class="h" onclick="setAttribute('id','answer')"></td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>9</td>
+          </tr>
+        </table>
+      </td>
+      <td colspan="3" rowspan="3" class="goldBox">
+        <table class="subTable">
+          <tr>
+            <td class="g" onclick="setAttribute('id','answer')"></td>
+            <td class="g" onclick="setAttribute('id','answer')"></td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td class="h" onclick="setAttribute('id','answer')"></td>
+            <td class="h" onclick="setAttribute('id','answer')"></td>
+            <td class="h" onclick="setAttribute('id','answer')"></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td class="i" onclick="setAttribute('id','answer')"></td>
+            <td class="i" onclick="setAttribute('id','answer')"></td>
+          </tr>
+        </table>
+      </td>
+      <td colspan="3" rowspan="3" class="greenBox">
+        <table class="subTable">
+          <tr>
+            <td class="g" onclick="setAttribute('id','answer')"></td>
+            <td class="g" onclick="setAttribute('id','answer')"></td>
+            <td class="g" onclick="setAttribute('id','answer')"></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td class="h" onclick="setAttribute('id','answer')"></td>
+            <td class="h" onclick="setAttribute('id','answer')"></td>
+          </tr>
+          <tr>
+            <td class="i" onclick="setAttribute('id','answer')"></td>
+            <td>6</td>
+            <td class="i" onclick="setAttribute('id','answer')"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr></tr>
+    <tr></tr>
+  </table>
+  <br />
+  <div id="number">
+    <button onclick="send(this)">1</button>
+    <button onclick="send(this)">2</button>
+    <button onclick="send(this)">3</button>
+    <button onclick="send(this)">4</button>
+    <button onclick="send(this)">5</button>
+    <button onclick="send(this)">6</button>
+    <button onclick="send(this)">7</button>
+    <button onclick="send(this)">8</button>
+    <button onclick="send(this)">9</button>
+  </div>
+  <div id="check">
+    <button onclick="check()">Check</button>
+  </div>
+
+
+</body>
+
+</html>
